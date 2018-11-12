@@ -93,3 +93,14 @@ RUN echo "deb https://apt.dockerproject.org/repo debian-jessie main" | tee /etc/
 #    jq -r '.plugins[] | .shortName +":"+ .version' | sort > plugins.txt
 #
 RUN install-plugins.sh $( paste -sd' ' /usr/share/jenkins/plugins.txt )
+
+# Install maven
+RUN apt-get update && ¥
+    apt-get install -y maven
+
+# Install vim
+RUN apt-get update && ¥
+    apt-get install -y vim
+
+# Disable http.sslVerify
+RUN git config --global http.sslVerify false
