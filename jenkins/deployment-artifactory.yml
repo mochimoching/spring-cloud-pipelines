@@ -1,16 +1,16 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: jenkins
+  name: artifactory
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        app: jenkins
+        app: artifactory
     spec:
       containers:
-      - name: jenkins
-        image: mochiregistry.azurecr.io/cicd/jenkins
+      - name: artifactory
+        image: mochiregistry.azurecr.io/cicd/artifactory
         ports:
-        - containerPort: 8080
+        - containerPort: 8081
