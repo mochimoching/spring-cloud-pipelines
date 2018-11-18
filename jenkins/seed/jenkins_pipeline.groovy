@@ -514,8 +514,8 @@ factory.job('jenkins-pipeline-k8s-declarative-seed') {
 	scm {
 		git {
 			remote {
-				url('${TOOLS_REPOSITORY}') 
-				credentials('git') 
+				url('${TOOLS_REPOSITORY}')
+				credentials('git')
 			}
 			branch('${TOOLS_BRANCH}')
 			extensions {
