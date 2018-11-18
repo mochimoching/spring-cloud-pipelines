@@ -514,7 +514,9 @@ factory.job('jenkins-pipeline-k8s-declarative-seed') {
 	scm {
 		git {
 			remote {
-				github('spring-cloud/spring-cloud-pipelines')
+				url('${TOOLS_REPOSITORY}') 
+				credentials('git') 
+           }
 			}
 			branch('${TOOLS_BRANCH}')
 			extensions {
